@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import PdfGenerate from "./components/PdfGenerate";
+import { inputs } from "./json/MapInput";
+import "./style/App.css";
 
 function App() {
+  const [state, setState] = useState([]);
+
+  let handleChange = (e) => {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="inputs">
+        {inputs.map((el, index) => (
+          <input
+            key={index}
+            type={el.type}
+            name={el.name}
+            placeholder={el.placeholder}
+            onChange={handleChange}
+          />
+        ))}
+      </div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <textarea
+          className="input__textaera"
+          cols="60"
+          rows="15"
+          name="descrizione"
+          placeholder="Cosa dichiari?"
+          onChange={handleChange}
+        ></textarea>
+      </div>
+      <PdfGenerate {...state} />
     </div>
   );
 }

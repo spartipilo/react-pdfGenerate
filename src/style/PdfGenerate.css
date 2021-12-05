@@ -1,0 +1,25 @@
+.button__disabled {
+  background-color: lightgray;
+  color: darkslategray;
+  display: block;
+  margin: auto;
+  width: 20%;
+  padding: 10px;
+  margin-top: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+}
+
+.button {
+  display: block;
+  margin: auto;
+  width: 20%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+}

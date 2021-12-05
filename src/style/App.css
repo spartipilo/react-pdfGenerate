@@ -1,0 +1,27 @@
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin: 20px 0;
+}
+.inputs input {
+  width: 30%;
+  margin: 10px 20px;
+  padding: 10px;
+}
+.input__textaera {
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  padding: 10px;
+}
+.inputs input[type="text"],
+.inputs input[type="date"] {
+  border-radius: 10px;
+  border: 1px solid lightgray;
+}
+
+.radio__group {
+  border: 1px solid lightgray;
+  border-radius: 20px;
+}
