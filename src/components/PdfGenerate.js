@@ -13,7 +13,13 @@ function PdfGenerate(props) {
   };
 
   const isDisabled = () => {
+    let controlValue = Object.values(props);
     if (Object.keys(props).length === 5) {
+      for (let i = 0; i < controlValue.length; i++) {
+        if (controlValue[i] === "") {
+          return true;
+        }
+      }
       return false;
     } else {
       return true;
