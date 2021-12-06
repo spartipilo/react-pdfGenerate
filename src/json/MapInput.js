@@ -18,4 +18,14 @@ export const inputs = [
     type: "date",
     name: "dataDiNascita",
   },
+  {
+    type: "text",
+    name: "residenza",
+    placeholder: "Residente in...",
+  },
+  {
+    type: "text",
+    name: "cittaDiResidenza",
+    placeholder: "Città di residenza...",
+  },
 ];

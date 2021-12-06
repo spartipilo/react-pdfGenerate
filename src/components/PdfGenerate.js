@@ -14,7 +14,7 @@ function PdfGenerate(props) {
 
   const isDisabled = () => {
     let controlValue = Object.values(props);
-    if (Object.keys(props).length === 5) {
+    if (Object.keys(props).length === 7) {
       for (let i = 0; i < controlValue.length; i++) {
         if (controlValue[i] === "") {
           return true;
@@ -33,7 +33,9 @@ function PdfGenerate(props) {
       },
       `\nIl/la sottoscritto/a ${props.nome} ${props.cognome} nato a ${
         props.nascita
-      } il ${moment(props.dataDiNascita).format("DD/MM/yyyy")}`,
+      } il ${moment(props.dataDiNascita).format("DD/MM/yyyy")}, residente in ${
+        props.residenza
+      } nella città di ${props.cittaDiResidenza}`,
       `\nConsapevole che chiunque rilascia dichiarazioni mendaci è punito ai sensi del codice penale e delle leggi speciali in materia, ai sensi e per gli effetti dell'art. 46 D.P.R. n. 445/2000`,
       {
         ...contentPdf[1],
