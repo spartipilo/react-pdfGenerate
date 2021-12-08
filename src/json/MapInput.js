@@ -21,7 +21,7 @@ export const inputs = [
   {
     type: "text",
     name: "residenza",
-    placeholder: "Residente in...",
+    placeholder: "Residente in via...",
   },
   {
     type: "text",
